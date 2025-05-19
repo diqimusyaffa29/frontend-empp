@@ -1,7 +1,6 @@
-import Image from 'next/image'
 import React from 'react'
 
-export default function HeroSection() {
+const HeroSection = () => {
     return (
         <section className="py-5 bg-black text-white text-center mt-5" id='heroSection'>
             <div className="container my-xl-5">
@@ -11,6 +10,7 @@ export default function HeroSection() {
                 </div>
             </div>
         </section>
-
     )
 }
+
+export default HeroSection

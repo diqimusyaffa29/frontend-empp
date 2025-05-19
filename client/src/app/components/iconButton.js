@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-const IconButtonLink = ({ url, imgSrc, alt, label,imgHeight,imgWidth }) => {
+const IconButtonLink = ({ url, imgSrc, alt, label,imgHeight,imgWidth, fontWeight }) => {
     return (
         <button
             onClick={() => window.open(url, '_blank', 'noopener,noreferrer')}
@@ -36,7 +36,7 @@ const IconButtonLink = ({ url, imgSrc, alt, label,imgHeight,imgWidth }) => {
                 width={imgWidth}
                 objectFit='contain'
             />
-            <h2>{label}</h2>
+            <p className={fontWeight}>{label}</p>
         </button>
     );
 };
