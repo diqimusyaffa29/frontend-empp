@@ -6,7 +6,14 @@ import React from 'react'
 export default function Navbar() {
     const pathName = usePathname()
 
-    
+    const handleNavLinkClick = () => {
+        const navbarCollapse = document.getElementById('navbarNavAltMarkup');
+        if (navbarCollapse && window.bootstrap) {
+            const collapseInstance = window.bootstrap.Collapse.getInstance(navbarCollapse) ||
+                new window.bootstrap.Collapse(navbarCollapse, { toggle: false });
+            collapseInstance.hide();
+        }
+    };
     return (
         <div className=''>
             <nav className="navbar navbar-expand-lg bg-light fixed-top">
@@ -17,13 +24,13 @@ export default function Navbar() {
                     </button>
                     <div className="collapse navbar-collapse " id="navbarNavAltMarkup">
                         <div className="navbar-nav ms-auto ps-2 pe-xl-4 gap-2">
-                            <Link href="/" className={`nav-link rounded ps-2 ${pathName === '/' ? 'active bg-success bg-gradient text-white  bg-opacity-75' : ''}`} aria-current="page">
+                            <Link href="/" className={`nav-link rounded ps-2 ${pathName === '/' ? 'active bg-success bg-gradient text-white  bg-opacity-75' : ''}`} aria-current="page" onClick={handleNavLinkClick}>
                                 Manajer On Duty
                             </Link>
-                            <Link href="/pedoman" className={`nav-link rounded ps-2 ${pathName === '/pedoman' ? 'active bg-success bg-gradient text-white bg-opacity-75' : ''}`} aria-current="page">
+                            <Link href="/pedoman" className={`nav-link rounded ps-2 ${pathName === '/pedoman' ? 'active bg-success bg-gradient text-white bg-opacity-75' : ''}`} aria-current="page" onClick={handleNavLinkClick}>
                                 Pedoman
                             </Link>
-                            <Link href="/tutorial" className={`nav-link rounded ps-2 ${pathName === '/tutorial' ? 'active bg-success bg-gradient text-white  bg-opacity-75' : ''}`} aria-current="page">
+                            <Link href="/tutorial" className={`nav-link rounded ps-2 ${pathName === '/tutorial' ? 'active bg-success bg-gradient text-white  bg-opacity-75' : ''}`} aria-current="page" onClick={handleNavLinkClick}>
                                 Tutorial
                             </Link>
                         </div>
