@@ -2,13 +2,17 @@ import 'bootstrap/dist/css/bootstrap.css'
 import "./globals.css";
 import BootstrapClient from './components/BootstrapClient';
 import Navbar from './components/navbar';
-import { Poppins } from 'next/font/google'
+import { Poppins } from 'next/font/google';
+import { Inter } from 'next/font/google';
+
 
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '600', '700'], // You can include any weights you need
   variable: '--font-poppins',    // Optional: CSS variable
 })
+
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
   title: "Create Next App",
@@ -18,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${poppins.variable}`}>
+      <body className={`${poppins.className}`}>
         <Navbar />
         {children}
         <BootstrapClient />
