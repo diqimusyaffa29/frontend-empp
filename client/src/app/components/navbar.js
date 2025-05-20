@@ -26,13 +26,13 @@ export default function Navbar() {
                     </button>
                     <div className="collapse navbar-collapse " id="navbarNavAltMarkup">
                         <div className="navbar-nav ms-auto ps-2 pe-xl-4 gap-2">
-                            <Link href="/" className={`nav-link rounded ps-2 ${pathName === '/' ? 'active bg-success bg-gradient text-white  bg-opacity-75' : ''}`} aria-current="page" onClick={handleNavLinkClick}>
+                            <Link href="/" className={`nav-link rounded ps-2 ${pathName === '/' ? 'active bg-success bg-gradient text-white' : ''}`} aria-current="page" onClick={handleNavLinkClick}>
                                 Manajer On Duty
                             </Link>
-                            <Link href="/pedoman" className={`nav-link rounded ps-2 ${pathName === '/pedoman' ? 'active bg-success bg-gradient text-white bg-opacity-75' : ''}`} aria-current="page" onClick={handleNavLinkClick}>
+                            <Link href="/pedoman" className={`nav-link rounded ps-2 ${pathName === '/pedoman' ? 'active bg-success bg-gradient text-white' : ''}`} aria-current="page" onClick={handleNavLinkClick}>
                                 Pedoman
                             </Link>
-                            <Link href="/tutorial" className={`nav-link rounded ps-2 ${pathName === '/tutorial' ? 'active bg-success bg-gradient text-white  bg-opacity-75' : ''}`} aria-current="page" onClick={handleNavLinkClick}>
+                            <Link href="/tutorial" className={`nav-link rounded ps-2 ${pathName === '/tutorial' ? 'active bg-success bg-gradient text-white' : ''}`} aria-current="page" onClick={handleNavLinkClick}>
                                 Tutorial
                             </Link>
                         </div>

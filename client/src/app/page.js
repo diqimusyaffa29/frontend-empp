@@ -7,14 +7,22 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
-      <div className="container pb-5" style={{marginTop: 90}}>
-        <IconButtonLink imgSrc="/assets/hero.jpg" alt={`Laporan Kerja MOD`} label={`Laporan Kerja MOD`} url={`https://docs.google.com/spreadsheets/d/16uPsapAudZAbQa2qVKdNl-Qz8dZGD3en7Va0Vwz75FU/edit?gid=1335487255#gid=1335487255`} imgHeight={100} imgWidth={100} fontWeight={`fs-2`}/>
+      <div className="container pb-5" style={{marginTop: 90, textDecoration: 'none'}}>
+        <IconButtonLink imgSrc="/assets/laporanmod.png" alt={`Laporan Kerja MOD`} label={`Laporan Kerja MOD`} url={`https://docs.google.com/spreadsheets/d/16uPsapAudZAbQa2qVKdNl-Qz8dZGD3en7Va0Vwz75FU/edit?gid=1335487255#gid=1335487255`} imgHeight={100} imgWidth={100} fontWeight={`fs-2`}/>
         <hr style={{ borderTop: '3px solid #000' }} className='mb-5' />
-        <RowColumnLink label1={`Lantai 1`} label2={`Lantai 2`} floor={`MENU`} witchLink1={`/menus/lantai_1`} witchLink2={`/menus/lantai_2`}/>
-        <RowColumnLink label1={`Lantai 3`} label2={`Lantai 4`} witchLink1={`/menus/lantai_3`} witchLink2={`/menus/lantai_4`}/>
-        <RowColumnLink label1={`Lantai 5`} label2={`Jadwal Dokter`} witchLink1={`/menus/lantai_5`} witchLink2={`/menus/jadwal_dokter`}/>
-        <RowColumnLink label1={`Jadwal MOD`} label2={`Bank Perawat`} witchLink1={`/menus/jadwal_mod`} witchLink2={`/menus/bank_perawat`}/>
+        <RowColumnLink imgSrc1={`/assets/lantai1.webp`} imgSrc2={`/assets/lantai2.webp`} label1={`Lantai 1`} label2={`Lantai 2`} floor={`MENU`} witchLink1={`/menus/lantai_1`} witchLink2={`/menus/lantai_2`}/>
+        <RowColumnLink imgSrc1={`/assets/lantai3.webp`} imgSrc2={`/assets/lantai4.webp`} label1={`Lantai 3`} label2={`Lantai 4`} witchLink1={`/menus/lantai_3`} witchLink2={`/menus/lantai_4`}/>
+        <RowColumnLink imgSrc1={`/assets/lantai5.webp`} imgSrc2={`/assets/dokter.png`} label1={`Lantai 5`} label2={`Jadwal Dokter`} witchLink1={`/menus/lantai_5`} witchLink2={`/menus/jadwal_dokter`}/>
+        <RowColumnLink imgSrc1={`/assets/mod.webp`} imgSrc2={`/assets/perawat.png`} label1={`Jadwal MOD`} label2={`Bank Perawat`} witchLink1={`/menus/jadwal_mod`} witchLink2={`/menus/bank_perawat`}/>
         <hr style={{ borderTop: '3px solid #000' }} className='mb-5' />
+        <p className="display-3 text-center fw-semibold pb-5">INPUT DATA MOD</p>
+        <RowColumnLink imgSrc1={`/assets/igd.png`} imgSrc2={`/assets/irj.png`} label1={`Instalasi Gawat Darurat`} label2={`Instalasi Rawat Jalan`} witchLink1={`/menus/igd`} witchLink2={`/menus/irj`}/>
+        <RowColumnLink imgSrc1={`/assets/eyecenter.png`} imgSrc2={`/assets/urology.png`} label1={`Eye Center`} label2={`Urology Center`} witchLink1={`/menus/eye_center`} witchLink2={`/menus/urology_center`}/>
+        <RowColumnLink imgSrc1={`/assets/tppri.webp`} imgSrc2={`/assets/ibs.png`} label1={`TPPRI`} label2={`IBS`} witchLink1={`/menus/tppri`} witchLink2={`/menus/ibs`}/>
+        <RowColumnLink imgSrc1={`/assets/hd.jpeg`} imgSrc2={`/assets/rwi.jpg`} label1={`Hemodialisa`} label2={`Rawat Inap`} witchLink1={`/menus/hd`} witchLink2={`/menus/rwi`}/>
+        <RowColumnLink imgSrc1={`/assets/psrs.png`} imgSrc2={`/assets/keluhan.webp`} label1={`SARPRAS`} label2={`Keluhan`} witchLink1={`/menus/sarana`} witchLink2={`/menus/keluhan`}/>
+        <RowColumnLink imgSrc1={`/assets/keuangan.jpg`} imgSrc2={`/assets/sdm.jpg`} label1={`Keuangan`} label2={`SDM`} witchLink1={`/menus/keuangan`} witchLink2={`/menus/sdm`}/>
+        <IconButtonLink marginTop={20} marginBottom={0} imgSrc="/assets/catatn.jpg" alt={`Catatan`} label={`Catatan`} url={`https://docs.google.com/forms/d/e/1FAIpQLSfr_ILw7LlbcApfSdXFIqWQZWAf0bZvB1zZkcAc-SZ62EtYkw/viewform`} imgHeight={100} imgWidth={100} fontWeight={`fs-xl-4`}/>
       </div>
     </div>
   )

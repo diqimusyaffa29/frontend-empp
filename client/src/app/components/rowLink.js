@@ -2,23 +2,29 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const RowColumnLink = ({ floor, jadwal, fontWeight, label1, label2,witchLink1, witchLink2 }) => {
+const RowColumnLink = ({ floor, jadwal, fontWeight, label1, label2, witchLink1, witchLink2, imgSrc1, imgSrc2 }) => {
     return (
-        <div className="container text-center">
+        <div className="container text-center ">
             <p className="fs-1 fw-bold">{jadwal}</p>
             <p className="fs-3">{floor}</p>
-            <div className="row">
+            <div className="row gap-2">
                 <div className="col">
-                    <Link href={`${witchLink1}`}>
-                        <Image alt='Lantai 1' src={`/assets/hero.jpg`} width={100} height={100} />
-                        <p className={fontWeight} style={{textDecoration: 'none !important' , color:'black'}}>{label1}</p>
+                    <Link href={`${witchLink1}`} style={{ textDecoration: 'none', color: 'black' }} >
+                        <div className="border pt-2 rounded">
+                            <Image alt='Lantai 1' src={imgSrc1 || `/assets/hero.jpg`} width={100} height={100} />
+                            <p className={fontWeight}>{label1}</p>
+                        </div>
                     </Link>
+
                 </div>
                 <div className="col">
-                    <Link href={`${witchLink2}`}>
-                        <Image alt='Lantai 2' src={`/assets/hero.jpg`} width={100} height={100}/>
-                        <p className={fontWeight} style={{textDecoration: 'none !important' , color:'black'}}>{label2}</p>
+                    <Link href={`${witchLink2}`} style={{ textDecoration: 'none', color: 'black' }}>
+                        <div className="border pt-2 rounded">
+                            <Image alt='Lantai 2' src={imgSrc2 || `/assets/hero.jpg`} width={100} height={100} />
+                            <p className={fontWeight}>{label2}</p>
+                        </div>
                     </Link>
+
                 </div>
             </div>
         </div>

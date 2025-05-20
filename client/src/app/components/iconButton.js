@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-const IconButtonLink = ({ url, imgSrc, alt, label,imgHeight,imgWidth, fontWeight,marginTop }) => {
+const IconButtonLink = ({ url, imgSrc, alt, label,imgHeight,imgWidth, fontWeight,marginTop, marginBottom }) => {
     return (
         <button
             onClick={({}) => window.open(url, '_blank', 'noopener,noreferrer')}
@@ -16,14 +16,15 @@ const IconButtonLink = ({ url, imgSrc, alt, label,imgHeight,imgWidth, fontWeight
                 alignItems: 'center',
                 // justifyContent: 'center',
                 // marginTop: 90,
-                marginTop: {marginTop},
-                marginBottom: 90,
+                marginTop: marginTop,
+                marginBottom: marginBottom,
                 display: 'block',
                 marginLeft: 'auto',
                 marginRight: 'auto',
             }}
             aria-label={label}
             title={label}
+            className='border rounded p-2 shadow-sm'
         >
             {/* <img
                 src={imgSrc}
