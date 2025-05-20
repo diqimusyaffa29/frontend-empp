@@ -1,3 +1,7 @@
 #heroSection{
     background-image: url('/assets/hero.jpg');
 }
+
+#rowColumn{
+    margin-top: 80px;
+}

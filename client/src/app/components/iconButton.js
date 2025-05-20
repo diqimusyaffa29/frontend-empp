@@ -2,10 +2,10 @@
 import Image from 'next/image';
 import React from 'react';
 
-const IconButtonLink = ({ url, imgSrc, alt, label,imgHeight,imgWidth, fontWeight }) => {
+const IconButtonLink = ({ url, imgSrc, alt, label,imgHeight,imgWidth, fontWeight,marginTop }) => {
     return (
         <button
-            onClick={() => window.open(url, '_blank', 'noopener,noreferrer')}
+            onClick={({}) => window.open(url, '_blank', 'noopener,noreferrer')}
             style={{
                 border: 'none',
                 background: 'transparent',
@@ -15,7 +15,9 @@ const IconButtonLink = ({ url, imgSrc, alt, label,imgHeight,imgWidth, fontWeight
                 // display: 'inline-flex',
                 alignItems: 'center',
                 // justifyContent: 'center',
-                marginTop: 30,
+                // marginTop: 90,
+                marginTop: {marginTop},
+                marginBottom: 90,
                 display: 'block',
                 marginLeft: 'auto',
                 marginRight: 'auto',
