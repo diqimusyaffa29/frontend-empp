@@ -39,7 +39,7 @@ const IconButtonLink = ({ url, imgSrc, alt, label,imgHeight,imgWidth, fontWeight
                 alt={alt}
                 height={imgHeight}
                 width={imgWidth}
-                objectFit='contain'
+                style={{objectFit: 'contain'}}
             />
             <p className={fontWeight}>{label}</p>
         </button>
