@@ -6,8 +6,8 @@ import RowColumnLink from './components/rowLink'
 export default function Home() {
   return (
     <div>
-      <HeroSection />
-      <div className="container pb-5" style={{marginTop: 90, textDecoration: 'none'}}>
+      <HeroSection title={`M.O.D Supervision Website`} description={`Website for M.O.D to Supervise`}/>
+      <div className="container pb-5" style={{marginTop: 90}}>
         <IconButtonLink imgSrc="/assets/laporanmod.png" alt={`Laporan Kerja MOD`} label={`Laporan Kerja MOD`} url={`https://docs.google.com/spreadsheets/d/16uPsapAudZAbQa2qVKdNl-Qz8dZGD3en7Va0Vwz75FU/edit?gid=1335487255#gid=1335487255`} imgHeight={100} imgWidth={100} fontWeight={`fs-2`}/>
         <hr style={{ borderTop: '3px solid #000' }} className='mb-5' />
         <RowColumnLink imgSrc1={`/assets/lantai1.webp`} imgSrc2={`/assets/lantai2.webp`} label1={`Lantai 1`} label2={`Lantai 2`} floor={`MENU`} witchLink1={`/menus/lantai_1`} witchLink2={`/menus/lantai_2`}/>

@@ -1,8 +1,10 @@
-"use client"
+'use client'
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import React from 'react';
 
 const IconButtonLink = ({ url, imgSrc, alt, label,imgHeight,imgWidth, fontWeight,marginTop, marginBottom }) => {
+    const pathName = usePathname()
     return (
         <button
             onClick={({}) => window.open(url, '_blank', 'noopener,noreferrer')}
@@ -24,7 +26,7 @@ const IconButtonLink = ({ url, imgSrc, alt, label,imgHeight,imgWidth, fontWeight
             }}
             aria-label={label}
             title={label}
-            className='border rounded p-2 shadow-sm'
+            className={`${pathName === '/' ? 'border' : ''}rounded p-2 shadow mb-5`}
         >
             {/* <img
                 src={imgSrc}
