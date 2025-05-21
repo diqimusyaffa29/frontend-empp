@@ -6,7 +6,8 @@ const HeroSection = ({title, description}) => {
             <div className="container my-xl-5">
                 <div className="row align-items-center">
                     <p className="display-3">{title}</p>
-                    <p className="lead mb-4">{description}</p>
+                    {description && <p className="lead mb-4">{description}</p>}
+                    
                 </div>
             </div>
         </section>
