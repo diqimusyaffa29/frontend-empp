@@ -5,3 +5,13 @@
 /* #rowColumn{
     margin-top: 80px;
 } */
+/* Hide scrollbar for the entire page */
+html, body {
+  overflow-y: scroll; /* allow vertical scroll */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
