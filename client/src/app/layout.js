@@ -1,4 +1,3 @@
-
 import 'bootstrap/dist/css/bootstrap.css'
 import "./globals.css";
 import BootstrapClient from './components/BootstrapClient';
@@ -6,6 +5,9 @@ import Navbar from './components/navbar';
 import { Poppins } from 'next/font/google';
 import { Inter } from 'next/font/google';
 import FooterWrapper from './components/FooterWrapper';
+import NavbarWrapper from './components/NavbarWrapper';
+import UseAuth from './hooks/useAuth';
+
 
 
 const poppins = Poppins({
@@ -21,9 +23,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    <link rel="icon" href="/favicon.ico" sizes="any" />
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={`${poppins.className}`}>
-        <Navbar />
+        <UseAuth/>
+        <NavbarWrapper />
         {children}
         <FooterWrapper />
         <BootstrapClient />
