@@ -1,7 +1,6 @@
 /.phpunit.cache
 /node_modules
 /public/build
-/public/dist
 /public/hot
 /public/storage
 /storage/*.key
@@ -18,3 +17,7 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# Ignore frontend build folder
+/dist
+/public/dist
