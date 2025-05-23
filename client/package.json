@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "preview": "npx serve out -l 4000",
     "start": "set PORT=4000 && next start",
     "lint": "next lint"

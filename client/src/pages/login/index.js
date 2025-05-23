@@ -19,14 +19,15 @@ const LoginPage = () => {
         } else {
             setLoading(false)
         }
-    }, [])
+    }, [router])
 
     const handleLogin = async (e) => {
         e.preventDefault();
         setError(''); // reset error on submit
 
         try {
-            const response = await axios.post('http://localhost:8000/api/login', {
+            const response = await axios.post('https://e-mpp.rsisabanjarbaru.com/api/login', {
+            // const response = await axios.post('http://localhost:8000/api/login', {
                 username,
                 password,
             });

@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import HeroSection from '@/components/heroSections'
 import BulletList from '@/components/bulletList'
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/router'
 
 export default function tutorialPage() {
     const router = useRouter()
@@ -13,7 +13,7 @@ export default function tutorialPage() {
         if (!token) {
             router.push('/login/')
         }
-    }, [])
+    }, [router])
     return (
         <div>
             <HeroSection title={`TUTORIAL`} />

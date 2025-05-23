@@ -6,6 +6,7 @@ import NavbarWrapper from '@/components/NavbarWrapper';
 import FooterWrapper from '@/components/FooterWrapper';
 
 import { Poppins } from 'next/font/google';
+import UseAuth from '@/hooks/useAuth';
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '600', '700'],
@@ -13,7 +14,7 @@ const poppins = Poppins({
 });
 
 export default function MyApp({ Component, pageProps }) {
-    return (
+  return (
     <div className={poppins.className}>
       <NavbarWrapper />
       <Component {...pageProps} />

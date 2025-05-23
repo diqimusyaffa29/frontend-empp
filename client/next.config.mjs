@@ -5,7 +5,7 @@ const nextConfig = {
         domains: ['mdbcdn.b-cdn.net'],
         unoptimized: true,
     },
-    assetPrefix:'/dist/',
+    assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX || '',
     basePath:'/dist',
     trailingSlash: true
 };

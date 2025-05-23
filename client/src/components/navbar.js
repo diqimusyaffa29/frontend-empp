@@ -13,7 +13,7 @@ export default function Navbar() {
             if (!token) return;
 
             try {
-                const res = await axios.get('http://localhost:8000/api/user', {
+                const res = await axios.get('https://e-mpp.rsisabanjarbaru.com/api/user', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }
@@ -27,30 +27,17 @@ export default function Navbar() {
         fetchUser();
     }, []);
 
-    const logout = async () => {
-        const token = localStorage.getItem('auth_token');
+    const logout = () => {
+        const token = localStorage.getItem("auth_token");
 
         if (!token) {
-            console.warn('No token found.');
+            console.warn("No token found.");
             return;
         }
+        localStorage.removeItem("auth_token");
+        localStorage.removeItem("user");
 
-        try {
-            await axios.post('http://localhost:8000/api/logout', null, {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                },
-            });
-
-            // Clear token on success
-            localStorage.removeItem('auth_token');
-            localStorage.removeItem('user');
-
-            // Redirect to login page
-            window.location.href = '/login/';
-        } catch (error) {
-            console.error('Logout failed:', error.response?.data || error.message);
-        }
+        window.location.href = "/login/";
     };
 
     const pathName = usePathname()
