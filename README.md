@@ -58,4 +58,4 @@ Prasyarat
 4. Pastikan frontend dan backend terhubung dengan konfigurasi API yang sesuai.
 
 ## 📞 Kontak
-Untuk pertanyaan, saran, atau laporan bug, silakan hubungi tim pengembang melalui email: diqimusyaffa.business@gmail.com
+Untuk pertanyaan, saran, atau laporan bug, silakan hubungi tim pengembang melalui email: diqimusyaffa.business@gmail.com  or lanaeleven@gmail.com
