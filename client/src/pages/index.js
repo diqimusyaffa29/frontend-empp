@@ -15,26 +15,57 @@ export default function Home() {
   }, [router])
 
   const prefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || '';
-  
+
+  const userRole = 'mpp'
+  const isLimitedRole = ['kabid', 'kabag', 'kains', 'direktur'].includes(userRole);
+
   return (
     <div>
-      <HeroSection title={`M.O.D Supervision Website`} description={`Website for M.O.D to Supervise`} />
+      <HeroSection title={`MPP Supervision Website`} description={`Website for MPP to Supervise`} />
       <div className="container pb-5" style={{ marginTop: 90 }}>
-        <IconButtonLink imgSrc={`${prefix}/assets/laporanmod.png`} alt={`Laporan Kerja MOD`} label={`Laporan Kerja MOD`} url={`https://docs.google.com/spreadsheets/d/16uPsapAudZAbQa2qVKdNl-Qz8dZGD3en7Va0Vwz75FU/edit?gid=1335487255#gid=1335487255`} imgHeight={100} imgWidth={100} fontWeight={`fs-2`} />
-        <hr style={{ borderTop: '3px solid #000' }} className='mb-5' />
-        <RowColumnLink imgSrc1={`${prefix}/assets/lantai1.webp`} imgSrc2={`${prefix}/assets/lantai2.webp`} label1={`Lantai 1`} label2={`Lantai 2`} floor={`MENU`} witchLink1={`/menus/lantai_1`} witchLink2={`/menus/lantai_2`} />
-        <RowColumnLink imgSrc1={`${prefix}/assets/lantai3.webp`} imgSrc2={`${prefix}/assets/lantai4.webp`} label1={`Lantai 3`} label2={`Lantai 4`} witchLink1={`/menus/lantai_3`} witchLink2={`/menus/lantai_4`} />
-        <RowColumnLink imgSrc1={`${prefix}/assets/lantai5.webp`} imgSrc2={`${prefix}/assets/dokter.png`} label1={`Lantai 5`} label2={`Jadwal Dokter`} witchLink1={`/menus/lantai_5`} witchLink2={`/menus/jadwal_dokter`} />
-        <RowColumnLink imgSrc1={`${prefix}/assets/mod.webp`} imgSrc2={`${prefix}/assets/perawat.png`} label1={`Jadwal MOD`} label2={`Bank Perawat`} witchLink1={`/menus/jadwal_mod`} witchLink2={`/menus/bank_perawat`} />
-        <hr style={{ borderTop: '3px solid #000' }} className='mb-5' />
-        <p className="display-3 text-center fw-semibold pb-5">INPUT DATA MOD</p>
-        <RowColumnLink imgSrc1={`${prefix}/assets/igd.png`} imgSrc2={`${prefix}/assets/irj.png`} label1={`Instalasi Gawat Darurat`} label2={`Instalasi Rawat Jalan`} witchLink1={`/menus/igd`} witchLink2={`/menus/irj`} />
-        <RowColumnLink imgSrc1={`${prefix}/assets/eyecenter.png`} imgSrc2={`${prefix}/assets/urology.png`} label1={`Eye Center`} label2={`Urology Center`} witchLink1={`/menus/eye_center`} witchLink2={`/menus/urology_center`} />
-        <RowColumnLink imgSrc1={`${prefix}/assets/tppri.webp`} imgSrc2={`${prefix}/assets/ibs.png`} label1={`TPPRI`} label2={`IBS`} witchLink1={`/menus/tppri`} witchLink2={`/menus/ibs`} />
-        <RowColumnLink imgSrc1={`${prefix}/assets/hd.jpeg`} imgSrc2={`${prefix}/assets/rwi.jpg`} label1={`Hemodialisa`} label2={`Rawat Inap`} witchLink1={`/menus/hd`} witchLink2={`/menus/rwi`} />
-        <RowColumnLink imgSrc1={`${prefix}/assets/psrs.png`} imgSrc2={`${prefix}/assets/keluhan.webp`} label1={`SARPRAS`} label2={`Keluhan`} witchLink1={`/menus/sarana`} witchLink2={`/menus/keluhan`} />
-        <RowColumnLink imgSrc1={`${prefix}/assets/keuangan.jpg`} imgSrc2={`${prefix}/assets/sdm.jpg`} label1={`Keuangan`} label2={`SDM`} witchLink1={`/menus/keuangan`} witchLink2={`/menus/sdm`} />
-        <IconButtonLink marginTop={20} marginBottom={0} imgSrc={`${prefix}/assets/catatn.jpg`} alt={`Catatan`} label={`Catatan`} url={`https://docs.google.com/forms/d/e/1FAIpQLSfr_ILw7LlbcApfSdXFIqWQZWAf0bZvB1zZkcAc-SZ62EtYkw/viewform`} imgHeight={100} imgWidth={100} fontWeight={`fs-xl-4`} />
+        {(userRole === 'mpp' || isLimitedRole) && (
+          <IconButtonLink imgSrc={`${prefix}/assets/laporanmod.png`} alt={`Hasil Supervise`} label={`Hasil Supervisi`} url={`https://docs.google.com/spreadsheets/d/16uPsapAudZAbQa2qVKdNl-Qz8dZGD3en7Va0Vwz75FU/edit?gid=1335487255#gid=1335487255`} imgHeight={100} imgWidth={100} fontWeight={`fs-2`} />
+        )}
+        {/* MENU JADWAL PERAWAT START */}
+        {(userRole === 'mpp' || userRole === 'karu') && (
+          <>
+            <hr style={{ borderTop: '3px solid #000' }} className='mb-xl-3 mb-5' />
+            <p className="fs-3 text-center">JADWAL</p>
+            <div className="row mt-4">
+              <div className="col">
+                <IconButtonLink alt={`Jadwal Unit`} label={`Jadwal Unit`} imgSrc={`${prefix}/assets/unit.jpg`} imgHeight={100} imgWidth={100} />
+              </div>
+              <div className="col">
+                <IconButtonLink alt={`Jadwal Dokter DPJP`} label={`Jadwal Dokter DPJP`} imgSrc={`${prefix}/assets/dokter.png`} imgHeight={100} imgWidth={100} />
+              </div>
+              <div className="col">
+                <IconButtonLink alt={`Jadwal Dokter Jaga`} label={`Jadwal Dokter Jaga`} imgSrc={`${prefix}/assets/dokter.png`} imgHeight={100} imgWidth={100} />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col">
+                <IconButtonLink alt={`Jadwal MPP`} label={`Jadwal MPP`} imgSrc={`${prefix}/assets/jadwal.jpg`} imgHeight={100} imgWidth={100} />
+              </div>
+              <div className="col">
+                <IconButtonLink alt={`On call`} label={`On Call`} imgSrc={`${prefix}/assets/unit.jpg`} imgHeight={100} imgWidth={100} />
+              </div>
+              <div className="col">
+                <IconButtonLink alt={`Bank Perawat`} label={`Bank Perawat`} imgSrc={`${prefix}/assets/perawat.png`} imgHeight={100} imgWidth={100} />
+              </div>
+            </div>
+            {/* MENU JADWAL PERAWAT END */}
+            {/* MENU INPUT SUPERVISI START */}
+            {userRole === "mpp" && (
+              <>
+                <hr style={{ borderTop: '3px solid #000' }} className='mb-xl-3 mb-5' />
+                <RowColumnLink isBorder1={`border`} isBorder2={`border`} imgSrc1={`${prefix}/assets/supervisi1.avif`} imgSrc2={`${prefix}/assets/supervisi1.avif`} label1={`Supervisi Layanan Rumah Sakit`} label2={`Supervisi Sumber Daya Manusia`} floor={`Menu Supervisi`} witchLink1={`/primaryMenus/slrs`} witchLink2={`/primaryMenus/ssdm`} />
+                <RowColumnLink isBorder1={`border`} isBorder2={`border`} imgSrc1={`${prefix}/assets/supervisi1.avif`} imgSrc2={`${prefix}/assets/supervisi1.avif`} label1={`Supervisi Sarana Prasarana`} label2={`Supervisi Billing`} witchLink1={`/primaryMenus/ssarpras`} witchLink2={`/primaryMenus/sbilling`} />
+                <RowColumnLink isBorder1={`border`} isBorder2={`border`} imgSrc1={`${prefix}/assets/kepuasanpelanggan.jpg`} imgSrc2={`${prefix}/assets/three-dots.svg`} label1={`Kepuasaan Pelanggan`} label2={`Lainnya`} witchLink1={`/primaryMenus/kepuasan`} witchLink2={`/primaryMenus/lainnya`} />
+                {/* MENU INPUT SUPERVISI END */}
+              </>
+            )}
+          </>
+        )}
       </div>
     </div>
   )
