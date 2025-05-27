@@ -94,8 +94,8 @@ export default function Navbar() {
                             <Link
                                 href="/"
                                 className={`nav-link rounded ps-2 ${pathName === "/"
-                                        ? "active bg-success bg-gradient text-white"
-                                        : ""
+                                    ? "active bg-success bg-gradient text-white"
+                                    : ""
                                     }`}
                                 aria-current="page"
                                 onClick={handleNavLinkClick}
@@ -105,8 +105,8 @@ export default function Navbar() {
                             <Link
                                 href="/pedoman"
                                 className={`nav-link rounded ps-2 ${pathName === "/pedoman/"
-                                        ? "active bg-success bg-gradient text-white"
-                                        : ""
+                                    ? "active bg-success bg-gradient text-white"
+                                    : ""
                                     }`}
                                 aria-current="page"
                                 onClick={handleNavLinkClick}
@@ -116,18 +116,26 @@ export default function Navbar() {
                             <Link
                                 href="/tutorial"
                                 className={`nav-link rounded ps-2 ${pathName === "/tutorial/"
-                                        ? "active bg-success bg-gradient text-white"
-                                        : ""
+                                    ? "active bg-success bg-gradient text-white"
+                                    : ""
                                     }`}
                                 aria-current="page"
                                 onClick={handleNavLinkClick}
                             >
                                 Tutorial
                             </Link>
-                            <p className="fs-5 rounded ps-2">{user?.name || "Guest"}</p>
-                            <button onClick={logout} className="btn btn-danger">
-                                Logout
-                            </button>
+                            <div className="dropdown">
+                                <button className="container btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {`${user?.name || 'Guest'}`}
+                                </button>
+                                <ul className="dropdown-menu container p-auto">
+                                    <li>
+                                        <button onClick={logout} className="btn btn-danger dropdown-item">
+                                            Logout
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
