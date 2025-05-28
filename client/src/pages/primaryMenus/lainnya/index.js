@@ -2,7 +2,7 @@ import IconButtonLink from "@/components/iconButton";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const lainnyaPage = () => {
+const LainnyaPage = () => {
   const [url, setUrl] = useState(null);
 
   useEffect(() => {
@@ -35,4 +35,4 @@ const lainnyaPage = () => {
   );
 };
 
-export default lainnyaPage;
+export default LainnyaPage;

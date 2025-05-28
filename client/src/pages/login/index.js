@@ -19,7 +19,7 @@ const LoginPage = () => {
     } else {
       setLoading(false);
     }
-  }, []);
+  }, [router]);
 
   const handleLogin = async (e) => {
     e.preventDefault();

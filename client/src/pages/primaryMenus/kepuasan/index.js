@@ -2,7 +2,7 @@ import IconButtonLink from "@/components/iconButton";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const kepuasanPage = () => {
+const KepuasanPage = () => {
   const [url, setUrl] = useState(null);
 
   useEffect(() => {
@@ -32,4 +32,4 @@ const kepuasanPage = () => {
   );
 };
 
-export default kepuasanPage;
+export default KepuasanPage;
