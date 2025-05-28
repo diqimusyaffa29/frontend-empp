@@ -1,17 +1,36 @@
-import Link from 'next/link'
-import React from 'react'
-import IconButtonLink from '@/components/iconButton'
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import IconButtonLink from "@/components/iconButton";
 
 const TppriPage = () => {
-    const prefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || '';
-    return (
-        <div className='container' style={{marginTop: 100}}>
-            <IconButtonLink imgSrc={`${prefix}/assets/rwi.jpg`} alt={`Pelayanan TPPRI`} label={`Pelayanan TPPRI`} url={`https://docs.google.com/forms/d/e/1FAIpQLSc5BcV-B1PNXFJWIapIusyUHPKXhBtM7gXDUZOFsXFWBG98zA/viewform`} imgHeight={100} imgWidth={100} fontWeight={`fs-xl-4`}/>
-            <Link href={`/`} >
-                <button className="btn btn-primary" type="submit" style={{ float: 'right' }}>Back to Home</button>
-            </Link>
-        </div>
-    )
-}
+  const prefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
+  const [url, setUrl] = useState(null);
 
-export default TppriPage
+  useEffect(() => {
+    setUrl(JSON.parse(localStorage.getItem("rs") || "null"));
+  }, []);
+  return (
+    <div className="container" style={{ marginTop: 100 }}>
+      <IconButtonLink
+        imgSrc={`${prefix}/assets/rwi.jpg`}
+        alt={`Pelayanan TPPRI`}
+        label={`Pelayanan TPPRI`}
+        url={url?.tppri}
+        imgHeight={100}
+        imgWidth={100}
+        fontWeight={`fs-xl-4`}
+      />
+      <Link href={`/`}>
+        <button
+          className="btn btn-primary"
+          type="submit"
+          style={{ float: "right" }}
+        >
+          Back to Home
+        </button>
+      </Link>
+    </div>
+  );
+};
+
+export default TppriPage;
