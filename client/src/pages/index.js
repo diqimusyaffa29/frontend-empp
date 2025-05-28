@@ -42,15 +42,15 @@ export default function Home() {
                 <IconButtonLink alt={`Jadwal Dokter Jaga`} label={`Jadwal Dokter Jaga`} imgSrc={`${prefix}/assets/dokter.png`} imgHeight={100} imgWidth={100} />
               </div>
             </div>
-            <div className="row">
-              <div className="col">
-                <IconButtonLink alt={`Jadwal MPP`} label={`Jadwal MPP`} imgSrc={`${prefix}/assets/jadwal.jpg`} imgHeight={100} imgWidth={100} />
-              </div>
-              <div className="col">
-                <IconButtonLink alt={`On call`} label={`On Call`} imgSrc={`${prefix}/assets/unit.jpg`} imgHeight={100} imgWidth={100} />
-              </div>
-              <div className="col">
-                <IconButtonLink alt={`Bank Perawat`} label={`Bank Perawat`} imgSrc={`${prefix}/assets/perawat.png`} imgHeight={100} imgWidth={100} />
+            <div className="container">
+              <div className="row">
+                <div className="col">
+                  <IconButtonLink alt={`Jadwal MPP`} label={`Jadwal MPP`} imgSrc={`${prefix}/assets/jadwal.jpg`} imgHeight={100} imgWidth={100} />
+                </div>
+                <div className="col ms-xl-5">
+                  {/* <IconButtonLink alt={`On call`} label={`On Call`} imgSrc={`${prefix}/assets/unit.jpg`} imgHeight={100} imgWidth={100} /> */}
+                  <RowColumnLink isBorder1={`rounded p-2 shadow mb-5 col-xl-4 ms-xl-5`} imgSrc1={`${prefix}/assets/unit.jpg`} witchLink1={`/menus/oncall`} label1={`On Call`} />
+                </div>
               </div>
             </div>
             {/* MENU JADWAL PERAWAT END */}

@@ -8,7 +8,7 @@ const FooterComponent = () => {
                     <div className="row">
                         <div className="col-md-6 mb-4 mb-md-0">
                             <h5 className="text-uppercase">About</h5>
-                            <p>Supervision Website for MOD of Hospital</p>
+                            <p>Supervision Website for MPP of Hospital</p>
                         </div>
                         <div className="col-md-6 mb-4 mb-md-0">
                             <h5 className="text-uppercase">Contact</h5>
