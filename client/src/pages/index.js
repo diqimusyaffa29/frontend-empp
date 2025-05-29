@@ -35,7 +35,7 @@ export default function Home() {
             imgSrc={`${prefix}/assets/laporanmod.png`}
             alt={`Hasil Supervise`}
             label={`Hasil Supervisi`}
-            url={`https://docs.google.com/spreadsheets/d/16uPsapAudZAbQa2qVKdNl-Qz8dZGD3en7Va0Vwz75FU/edit?gid=1335487255#gid=1335487255`}
+            url={url?.hasilSupervisi}
             imgHeight={100}
             imgWidth={100}
             fontWeight={`fs-2`}
