@@ -1,8 +1,8 @@
+import RowColumn from "@/components/row";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import IconButtonLink from "@/components/iconButton";
 
-const KeuanganPage = () => {
+export default function OncallPage() {
   const prefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
   const [url, setUrl] = useState(null);
 
@@ -11,14 +11,19 @@ const KeuanganPage = () => {
   }, []);
   return (
     <div className="container" style={{ marginTop: 100 }}>
-      <IconButtonLink
-        imgSrc={`${prefix}/assets/gagalbayar.avif`}
-        alt={`Pasien Gagal Bayar`}
-        label={`Pasien Gagal Bayar`}
-        url={url?.billing}
-        imgHeight={100}
-        imgWidth={100}
-        fontWeight={`fs-xl-4`}
+      <RowColumn
+        imgH1={100}
+        imgH2={100}
+        imgW1={100}
+        imgW2={100}
+        colAlt1={`Form Pengajuan Bank Perawat`}
+        colAlt2={`Daftar Pengajuan`}
+        labelCol1={`Form Pengajuan Bank Perawat`}
+        labelCol2={`Daftar Pengajuan`}
+        imgCol1={`${prefix}/assets/laporanmod.png`}
+        imgCol2={`${prefix}/assets/laporanmod.png`}
+        urlCol1={url?.formBankPerawat}
+        urlCol2={url?.hasilBankPerawat}
       />
       <Link href={`/`}>
         <button
@@ -31,6 +36,4 @@ const KeuanganPage = () => {
       </Link>
     </div>
   );
-};
-
-export default KeuanganPage;
+}
