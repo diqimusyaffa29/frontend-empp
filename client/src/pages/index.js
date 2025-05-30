@@ -31,19 +31,34 @@ export default function Home() {
       />
       <div className="container pb-5" style={{ marginTop: 90 }}>
         {(roles === "mpp" || isLimitedRole) && (
-          <IconButtonLink
-            imgSrc={`${prefix}/assets/laporanmod.png`}
-            alt={`Hasil Supervise`}
-            label={`Hasil Supervisi`}
-            url={url?.hasilSupervisi}
-            imgHeight={100}
-            imgWidth={100}
-            fontWeight={`fs-2`}
-          />
+          <div className="row">
+            <div className="col">
+              <IconButtonLink
+                imgSrc={`${prefix}/assets/laporanmod.png`}
+                alt={`Hasil Supervise`}
+                label={`Hasil Supervisi`}
+                url={url?.hasilSupervisi}
+                imgHeight={100}
+                imgWidth={100}
+                fontWeight={`fs-2`}
+              />
+            </div>
+            <div className="col">
+              <IconButtonLink
+                imgSrc={`${prefix}/assets/laporanmod.png`}
+                alt={`Temuan Hasil`}
+                label={`Temuan yang belum `}
+                url={url?.hasilSupervisi}
+                imgHeight={100}
+                imgWidth={100}
+                fontWeight={`fs-2`}
+              />
+            </div>
+          </div>
         )}
         {/* MENU JADWAL PERAWAT START */}
         {(roles === "mpp" || roles === "karu") && (
-          <>
+          <div>
             <hr
               style={{ borderTop: "3px solid #000" }}
               className="mb-xl-3 mb-5"
@@ -146,7 +161,7 @@ export default function Home() {
                 {/* MENU INPUT SUPERVISI END */}
               </>
             )}
-          </>
+          </div>
         )}
       </div>
     </div>

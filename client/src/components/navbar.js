@@ -58,18 +58,6 @@ export default function Navbar() {
           <div className="collapse navbar-collapse " id="navbarNavAltMarkup">
             <div className="navbar-nav ms-auto ps-2 pe-xl-4 gap-2">
               <Link
-                href="/user"
-                className={`nav-link rounded ps-2 ${
-                  pathName === "/users"
-                    ? "active bg-success bg-gradient text-white"
-                    : ""
-                }`}
-                aria-current="page"
-                onClick={handleNavLinkClick}
-              >
-                User Dashboard
-              </Link>
-              <Link
                 href="/"
                 className={`nav-link rounded ps-2 ${
                   pathName === "/"

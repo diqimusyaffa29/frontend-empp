@@ -20,7 +20,7 @@ export default function PedomanPage() {
 
   return (
     <div>
-      <HeroSection title={`Pedoman M.O.D`} />
+      <HeroSection title={`Pedoman MPP`} />
       <div className="container pb-5" style={{ marginTop: 90 }}>
         <IconButtonLink
           url={url?.materiPelatihan}
@@ -74,6 +74,7 @@ export default function PedomanPage() {
           urlCol1={url?.pedomanHd}
           urlCol2={url?.pedomanRwi}
         />
+        <RowColumn imgH1={200} imgW1={300} imgCol1={`${prefix}/assets/gdocs.png`} labelCol1={`SOP`} colAlt1={`SOP`} urlCol1={url?.pedomanSop}/>
       </div>
     </div>
   );
