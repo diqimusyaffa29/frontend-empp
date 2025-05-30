@@ -23,7 +23,7 @@ export default function PedomanPage() {
       <HeroSection title={`Pedoman M.O.D`} />
       <div className="container pb-5" style={{ marginTop: 90 }}>
         <IconButtonLink
-          url={`https://drive.google.com/drive/folders/1HXJQh9tLWu5NzzGNUfD8HKI8wImvvyGg?usp=drive_link`}
+          url={url?.materiPelatihan}
           label={`Materi Pelatihan`}
           fontWeight={`fs-2`}
           alt={`Materi Pelatihan Google Drive`}
