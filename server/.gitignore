@@ -17,7 +17,3 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-
-# Ignore frontend build folder
-/dist
-/public/dist

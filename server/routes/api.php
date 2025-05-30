@@ -17,21 +17,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
-Route::get('test', function () {
-    return response()->json([
-        'user' => 'John Doe',
-        'email' => 'john@example.com'
-    ]);
-});
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/user', function (Request $request) {
-        return $request->user();
-    });
+    Route::get('/user', [AuthController::class, 'user']);
+
+    // Route::post('/logout', function (Request $request) {
+    //     // Revoke token yang digunakan saat ini
+    //     $request->user()->currentAccessToken()->delete();
+    //     return response()->json(['message' => 'Berhasil logout']);
+    // });
 
     Route::post('/logout', function (Request $request) {
-        // Revoke token yang digunakan saat ini
-        $request->user()->currentAccessToken()->delete();
+        // Revoke token yang digunakan saat ini, jika ada
+        $token = $request->user()->currentAccessToken();
+        if ($token) {
+            $token->delete();
+        }
         return response()->json(['message' => 'Berhasil logout']);
     });
 });

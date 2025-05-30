@@ -6,7 +6,7 @@
     RewriteEngine On
 
     # Handle assets dengan MIME type yang benar
-    RewriteCond %{REQUEST_URI} ^/dist/dist/dist/asset.*\.(css|js|svg|png|jpg|jpeg|gif|woff|woff2|ttf|eot)$
+    RewriteCond %{REQUEST_URI} ^/dist/assets/.*\.(css|js|svg|png|jpg|jpeg|gif|woff|woff2|ttf|eot)$
     RewriteRule ^ - [L]
 
     # Handle Authorization Header
@@ -22,7 +22,4 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
-
-    RewriteCond %{REQUEST_URI} !^/dist/
-    RewriteRule ^(.*)$ /dist/$1 [L]
 </IfModule>
