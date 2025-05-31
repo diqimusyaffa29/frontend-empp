@@ -2,7 +2,7 @@ import IconButtonLink from "@/components/iconButton";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const sbilling = () => {
+const SBilling = () => {
   const [url, setUrl] = useState(null);
 
   useEffect(() => {
@@ -32,4 +32,4 @@ const sbilling = () => {
   );
 };
 
-export default sbilling;
+export default SBilling;

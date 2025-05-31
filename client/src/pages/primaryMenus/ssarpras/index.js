@@ -2,7 +2,7 @@ import IconButtonLink from "@/components/iconButton";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const ssarprasPage = () => {
+const SSarprasPage = () => {
   const [url, setUrl] = useState(null);
 
   useEffect(() => {
@@ -32,4 +32,4 @@ const ssarprasPage = () => {
   );
 };
 
-export default ssarprasPage;
+export default SSarprasPage;

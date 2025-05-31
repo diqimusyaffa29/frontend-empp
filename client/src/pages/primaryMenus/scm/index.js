@@ -2,7 +2,7 @@ import RowColumn from "@/components/row";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const caseManagerPage = () => {
+const CaseManagerPage = () => {
   const prefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
   const [url, setUrl] = useState(null);
 
@@ -53,4 +53,4 @@ const caseManagerPage = () => {
   );
 };
 
-export default caseManagerPage;
+export default CaseManagerPage;
