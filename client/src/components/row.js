@@ -10,9 +10,11 @@ const RowColumn = ({ floor, colAlt1, colAlt2, labelCol1, labelCol2, imgCol1, img
                 <div className="col mb-5">
                     <IconButtonLink fontWeight={`fs-xl-4 fw-normal`} alt={colAlt1} imgSrc={imgCol1 || `assets/hero.jpg`} imgHeight={imgH1} imgWidth={imgW1} label={labelCol1} url={urlCol1} />
                 </div>
-                <div className="col mb-5">
-                    <IconButtonLink fontWeight={`fs-xl-4 fw-normal`} alt={colAlt2} imgSrc={imgCol2 || `assets/hero.jpg`} imgHeight={imgH2} imgWidth={imgW2} label={labelCol2} url={urlCol2} />
-                </div>
+                {labelCol2 && (
+                    <div className="col mb-5">
+                        <IconButtonLink fontWeight={`fs-xl-4 fw-normal`} alt={colAlt2} imgSrc={imgCol2 || `assets/hero.jpg`} imgHeight={imgH2} imgWidth={imgW2} label={labelCol2} url={urlCol2} />
+                    </div>
+                )}
             </div>
         </div>
     )

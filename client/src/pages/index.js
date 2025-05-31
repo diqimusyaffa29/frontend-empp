@@ -31,19 +31,34 @@ export default function Home() {
       />
       <div className="container pb-5" style={{ marginTop: 90 }}>
         {(roles === "mpp" || isLimitedRole) && (
-          <IconButtonLink
-            imgSrc={`${prefix}/assets/laporanmod.png`}
-            alt={`Hasil Supervise`}
-            label={`Hasil Supervisi`}
-            url={url?.hasilSupervisi}
-            imgHeight={100}
-            imgWidth={100}
-            fontWeight={`fs-2`}
-          />
+          <div className="row">
+            <div className="col">
+              <IconButtonLink
+                imgSrc={`${prefix}/assets/laporanmod.png`}
+                alt={`Hasil Supervise`}
+                label={`Hasil Supervisi`}
+                url={url?.hasilSupervisi}
+                imgHeight={100}
+                imgWidth={100}
+                fontWeight={`fs-2`}
+              />
+            </div>
+            <div className="col">
+              <IconButtonLink
+                imgSrc={`${prefix}/assets/laporanmod.png`}
+                alt={`Temuan Hasil`}
+                label={`Temuan yang belum Selesai`}
+                url={url?.responCatatan}
+                imgHeight={100}
+                imgWidth={100}
+                fontWeight={`fs-2`}
+              />
+            </div>
+          </div>
         )}
         {/* MENU JADWAL PERAWAT START */}
         {(roles === "mpp" || roles === "karu") && (
-          <>
+          <div>
             <hr
               style={{ borderTop: "3px solid #000" }}
               className="mb-xl-3 mb-5"
@@ -94,7 +109,6 @@ export default function Home() {
                   />
                 </div>
                 <div className="col ms-xl-5">
-                  {/* <IconButtonLink alt={`On call`} label={`On Call`} imgSrc={`${prefix}/assets/unit.jpg`} imgHeight={100} imgWidth={100} /> */}
                   <RowColumnLink
                     isBorder1={`rounded p-2 shadow mb-5 col-xl-4 ms-xl-5`}
                     imgSrc1={`${prefix}/assets/icon/onCall.png`}
@@ -133,6 +147,31 @@ export default function Home() {
                   witchLink1={`/primaryMenus/ssarpras`}
                   witchLink2={`/primaryMenus/sbilling`}
                 />
+                {/* CASE MANAGER START */}
+                <RowColumnLink
+                  label1={`Form A`}
+                  label2={`Form B`}
+                  imgSrc1={`/assets/casemanager.png`}
+                  imgSrc2={`/assets/casemanager.png`}
+                  isBorder1={`border`}
+                  isBorder2={`border`}
+                  witchLink1={`/primaryMenus/forma`}
+                  witchLink2={`/primaryMenus/formb`}
+                />
+                <RowColumnLink
+                  label1={`Form P3`}
+                  label2={`Form Checklist P3`}
+                  imgSrc1={`/assets/casemanager.png`}
+                  imgSrc2={`/assets/casemanager.png`}
+                  isBorder1={`border`}
+                  isBorder2={`border`}
+                  witchLink1={`/primaryMenus/p3`}
+                  witchLink2={`/primaryMenus/checklistp3`}
+                />
+                {/* CASE MANAGER END */}
+                {/* MENU INPUT SUPERVISI END */}
+                
+                
                 <RowColumnLink
                   isBorder1={`border`}
                   isBorder2={`border`}
@@ -143,10 +182,9 @@ export default function Home() {
                   witchLink1={`/primaryMenus/kepuasan`}
                   witchLink2={`/primaryMenus/lainnya`}
                 />
-                {/* MENU INPUT SUPERVISI END */}
               </>
             )}
-          </>
+          </div>
         )}
       </div>
     </div>

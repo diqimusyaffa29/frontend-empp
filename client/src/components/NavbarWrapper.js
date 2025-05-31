@@ -5,7 +5,7 @@ export default function NavbarWrapper() {
     const router = useRouter();
     const pathName = router.pathname;
 
-    if (pathName === '/login') return null;
+    if (pathName === '/login' || pathName === '/user') return null;
 
     return <Navbar />;
 }

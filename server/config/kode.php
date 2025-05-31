@@ -45,12 +45,16 @@ return [
             'kepuasan' => 'https://docs.google.com/forms/d/e/1FAIpQLSch3eGw89zyw8-gJFlk1o5O-YZawqeoqwvcM4Lva8MkgyYihw/viewform?usp=header',
 
             'catatan' => 'https://docs.google.com/forms/d/e/1FAIpQLScanYLe8uq5VnzjOU5_DVMWn9r87RsjKOTkxZe_lHmEc9pk0Q/viewform?usp=header',
+            // RESPON CATATAN dst sampai role 5
 
             'formA' => 'https://docs.google.com/forms/d/e/1FAIpQLSfeG0xpCU5MWtRnnA0CVU0rUe3jXtjMUcn3Mr5QUBCGyjvCHg/viewform?usp=header',
+            // RESPON FORM A dst sampai role 5
             'formB' => 'https://docs.google.com/forms/d/e/1FAIpQLSemf5McGq1Fxx36zjlZSkrRTauV9kRC7hRX546gJ_YiuZ1tBw/viewform?usp=header',
+            // RESPON FORM B dst sampai role 5
             'formP3' => 'https://docs.google.com/forms/d/e/1FAIpQLSeVHlgNYldIBggcyIj-UGvlNWX57qQ1MA8Z6UqzPrfQk9vnow/viewform?usp=header',
+            // RESPON FORM P3 dst sampai role 5
             'ceklisFormP3' => 'https://docs.google.com/forms/d/e/1FAIpQLSefAZKvuatA7CY9CaJr0CXCqtmGv_QFBBh28fDDhqwRRkV_mQ/viewform?usp=header',
-
+            // RESPON FORM Checklist P3 dst sampai role 5
 
             'materiPelatihan' => 'https://drive.google.com/drive/folders/1xzwoTWuq32L2CxOr8nalv_-JW9f7gfi5?usp=sharing',
             'pedomanIgd' => 'https://docs.google.com/document/d/1Mx-y9MhbiZkH8UxLmvbhfyPzQFkBoIMERdS6lFdKEbQ/edit?usp=sharing',

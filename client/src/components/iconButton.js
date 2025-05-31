@@ -10,7 +10,7 @@ const IconButtonLink = ({ url, imgSrc, alt, label,imgHeight,imgWidth, fontWeight
             onClick={({}) => window.open(url, '_blank', 'noopener,noreferrer')}
             style={{
                 border: 'none',
-                background: 'transparent',
+                background: 'white',
                 cursor: 'pointer',
                 padding: 0,
                 // paddingLeft: 20,
@@ -26,7 +26,7 @@ const IconButtonLink = ({ url, imgSrc, alt, label,imgHeight,imgWidth, fontWeight
             }}
             aria-label={label}
             title={label}
-            className={`${pathName === '/' ? 'border' : ''}rounded p-2 shadow mb-5`}
+            className={`${pathName === '/' ? 'border' : ''} rounded p-2 shadow mb-5`}
         >
             {/* <img
                 src={imgSrc}
