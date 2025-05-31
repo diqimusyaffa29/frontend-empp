@@ -3,6 +3,9 @@ import HeroSection from "@/components/heroSections";
 import IconButtonLink from "@/components/iconButton";
 import RowColumnLink from "@/components/rowLink";
 import { useRouter } from "next/router";
+import Image from "next/image";
+import RowColumn from "@/components/row";
+import Link from "next/link";
 
 export default function Home() {
   const router = useRouter();
@@ -147,41 +150,36 @@ export default function Home() {
                   witchLink1={`/primaryMenus/ssarpras`}
                   witchLink2={`/primaryMenus/sbilling`}
                 />
-                {/* CASE MANAGER START */}
-                <RowColumnLink
-                  label1={`Form A`}
-                  label2={`Form B`}
-                  imgSrc1={`/assets/icon/formA.png`}
-                  imgSrc2={`/assets/icon/formB.png`}
-                  isBorder1={`border`}
-                  isBorder2={`border`}
-                  witchLink1={`/primaryMenus/forma`}
-                  witchLink2={`/primaryMenus/formb`}
-                />
-                <RowColumnLink
-                  label1={`Form P3`}
-                  label2={`Form Checklist P3`}
-                  imgSrc1={`/assets/icon/p3.png`}
-                  imgSrc2={`/assets/icon/checklist.png`}
-                  isBorder1={`border`}
-                  isBorder2={`border`}
-                  witchLink1={`/primaryMenus/p3`}
-                  witchLink2={`/primaryMenus/checklistp3`}
-                />
-                {/* CASE MANAGER END */}
-                {/* MENU INPUT SUPERVISI END */}
-                
-                
+
                 <RowColumnLink
                   isBorder1={`border`}
                   isBorder2={`border`}
                   imgSrc1={`${prefix}/assets/icon/kepuasanPelanggan.png`}
-                  imgSrc2={`${prefix}/assets/three-dots.svg`}
+                  imgSrc2={`${prefix}/assets/icon/caseManager.png`}
                   label1={`Kepuasaan Pelanggan`}
-                  label2={`Lainnya`}
+                  label2={`Case Manager`}
                   witchLink1={`/primaryMenus/kepuasan`}
-                  witchLink2={`/primaryMenus/lainnya`}
+                  witchLink2={`/primaryMenus/scm`}
                 />
+
+                <div className="row align-items-center justify-content-center">
+                  <div className="col-5">
+                    <Link
+                      href={`/primaryMenus/lainnya`}
+                      style={{ textDecoration: "none", color: "black" }}
+                    >
+                      <div className="border pt-2 rounded d-flex flex-column align-items-center justify-content-center">
+                        <Image
+                          alt="Lantai 1"
+                          src={`assets/three-dots.svg`}
+                          width={100}
+                          height={100}
+                        />
+                        <p className={"fontWeight"}>Lainnya</p>
+                      </div>
+                    </Link>
+                  </div>
+                </div>
               </>
             )}
           </div>
