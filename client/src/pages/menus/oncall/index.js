@@ -20,8 +20,8 @@ export default function OncallPage() {
         colAlt2={`Daftar Pengajuan`}
         labelCol1={`Form Pengajuan Bank Perawat`}
         labelCol2={`Daftar Pengajuan`}
-        imgCol1={`${prefix}/assets/laporanmod.png`}
-        imgCol2={`${prefix}/assets/laporanmod.png`}
+        imgCol1={`${prefix}/assets/icon/formBankPerawat.png`}
+        imgCol2={`${prefix}/assets/icon/daftarBankPerawat.png`}
         urlCol1={url?.formBankPerawat}
         urlCol2={url?.hasilBankPerawat}
       />

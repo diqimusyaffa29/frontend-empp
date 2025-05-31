@@ -21,8 +21,8 @@ const IgdPage = () => {
         colAlt2={`Penolakan Pasien`}
         labelCol1={`Pelayanan IGD`}
         labelCol2={`Penolakan Pasien`}
-        imgCol1={`${prefix}/assets/igd.png`}
-        imgCol2={`${prefix}/assets/penolakan.jpg`}
+        imgCol1={`${prefix}/assets/icon/igd.png`}
+        imgCol2={`${prefix}/assets/icon/penolakanPasien.png`}
         urlCol1={url?.igdA}
         urlCol2={url?.igdB}
       />
@@ -35,8 +35,8 @@ const IgdPage = () => {
         colAlt2={`Pasien di Rujuk`}
         labelCol1={`Pasien Observasi Lebih dari 1 Shift`}
         labelCol2={`Pasien di Rujuk`}
-        imgCol1={`${prefix}/assets/patient.jpg`}
-        imgCol2={`${prefix}/assets/patient.jpg`}
+        imgCol1={`${prefix}/assets/icon/pasienObservasi.png`}
+        imgCol2={`${prefix}/assets/icon/pasienRujuk.png`}
         urlCol1={url?.igdC}
         urlCol2={url?.igdD}
       />

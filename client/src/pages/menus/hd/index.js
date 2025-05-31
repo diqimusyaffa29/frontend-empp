@@ -22,8 +22,8 @@ const HemodialisaPage = () => {
         colAlt2={`Hemodialisa CITO`}
         labelCol1={`Pelayanan Hemodialisa`}
         labelCol2={`Hemodialisa CITO`}
-        imgCol1={`${prefix}/assets/hd.jpeg`}
-        imgCol2={`${prefix}/assets/hd.jpeg`}
+        imgCol1={`${prefix}/assets/icon/hemo.png`}
+        imgCol2={`${prefix}/assets/icon/hdCito.png`}
         urlCol1={url?.hdA}
         urlCol2={url?.hdB}
       />

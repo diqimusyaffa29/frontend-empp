@@ -12,7 +12,7 @@ const TppriPage = () => {
   return (
     <div className="container" style={{ marginTop: 100 }}>
       <IconButtonLink
-        imgSrc={`${prefix}/assets/rwi.jpg`}
+        imgSrc={`${prefix}/assets/icon/tppri.png`}
         alt={`Pelayanan TPPRI`}
         label={`Pelayanan TPPRI`}
         url={url?.tppri}

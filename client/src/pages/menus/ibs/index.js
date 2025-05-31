@@ -22,13 +22,13 @@ const IBSPage = () => {
         colAlt2={`Batal Operasi`}
         labelCol1={`Pelayanan Kamar Bedah`}
         labelCol2={`Batal Operasi`}
-        imgCol1={`${prefix}/assets/surgery.png`}
-        imgCol2={`${prefix}/assets/canceled.png`}
+        imgCol1={`${prefix}/assets/icon/ibs.png`}
+        imgCol2={`${prefix}/assets/icon/batalOperasi.png`}
         urlCol1={url?.ibsA}
         urlCol2={url?.ibsB}
       />
       <IconButtonLink
-        imgSrc={`${prefix}/assets/surgery.png`}
+        imgSrc={`${prefix}/assets/icon/operasiCito.png`}
         alt={`Operasi CITO`}
         label={`Operasi CITO`}
         url={url?.ibsC}

@@ -65,7 +65,7 @@ export default function Home() {
                   url={url?.jadwalDrDpjp}
                   alt={`Jadwal Dokter DPJP`}
                   label={`Jadwal Dokter DPJP`}
-                  imgSrc={`${prefix}/assets/dokter.png`}
+                  imgSrc={`${prefix}/assets/icon/drDpjp.png`}
                   imgHeight={100}
                   imgWidth={100}
                 />
@@ -75,7 +75,7 @@ export default function Home() {
                   url={url?.jadwalDrJaga}
                   alt={`Jadwal Dokter Jaga`}
                   label={`Jadwal Dokter Jaga`}
-                  imgSrc={`${prefix}/assets/dokter.png`}
+                  imgSrc={`${prefix}/assets/icon/drJaga.png`}
                   imgHeight={100}
                   imgWidth={100}
                 />
@@ -88,7 +88,7 @@ export default function Home() {
                     url={url?.jadwalMpp}
                     alt={`Jadwal MPP`}
                     label={`Jadwal MPP`}
-                    imgSrc={`${prefix}/assets/jadwal.jpg`}
+                    imgSrc={`${prefix}/assets/icon/mpp.png`}
                     imgHeight={100}
                     imgWidth={100}
                   />
@@ -97,7 +97,7 @@ export default function Home() {
                   {/* <IconButtonLink alt={`On call`} label={`On Call`} imgSrc={`${prefix}/assets/unit.jpg`} imgHeight={100} imgWidth={100} /> */}
                   <RowColumnLink
                     isBorder1={`rounded p-2 shadow mb-5 col-xl-4 ms-xl-5`}
-                    imgSrc1={`${prefix}/assets/unit.jpg`}
+                    imgSrc1={`${prefix}/assets/icon/onCall.png`}
                     witchLink1={`/menus/oncall`}
                     label1={`On Call`}
                   />
@@ -115,8 +115,8 @@ export default function Home() {
                 <RowColumnLink
                   isBorder1={`border`}
                   isBorder2={`border`}
-                  imgSrc1={`${prefix}/assets/supervisi1.avif`}
-                  imgSrc2={`${prefix}/assets/supervisi1.avif`}
+                  imgSrc1={`${prefix}/assets/icon/layananRs.png`}
+                  imgSrc2={`${prefix}/assets/icon/sdm.png`}
                   label1={`Supervisi Layanan Rumah Sakit`}
                   label2={`Supervisi Sumber Daya Manusia`}
                   floor={`Menu Supervisi`}
@@ -126,8 +126,8 @@ export default function Home() {
                 <RowColumnLink
                   isBorder1={`border`}
                   isBorder2={`border`}
-                  imgSrc1={`${prefix}/assets/supervisi1.avif`}
-                  imgSrc2={`${prefix}/assets/supervisi1.avif`}
+                  imgSrc1={`${prefix}/assets/icon/sarpras.png`}
+                  imgSrc2={`${prefix}/assets/icon/billing.png`}
                   label1={`Supervisi Sarana Prasarana`}
                   label2={`Supervisi Billing`}
                   witchLink1={`/primaryMenus/ssarpras`}
@@ -136,7 +136,7 @@ export default function Home() {
                 <RowColumnLink
                   isBorder1={`border`}
                   isBorder2={`border`}
-                  imgSrc1={`${prefix}/assets/kepuasanpelanggan.jpg`}
+                  imgSrc1={`${prefix}/assets/icon/kepuasanPelanggan.png`}
                   imgSrc2={`${prefix}/assets/three-dots.svg`}
                   label1={`Kepuasaan Pelanggan`}
                   label2={`Lainnya`}

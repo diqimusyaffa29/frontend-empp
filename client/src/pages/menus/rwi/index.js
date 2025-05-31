@@ -12,7 +12,7 @@ const RWIPage = () => {
   return (
     <div className="container" style={{ marginTop: 100 }}>
       <IconButtonLink
-        imgSrc={`${prefix}/assets/rwi.jpg`}
+        imgSrc={`${prefix}/assets/icon/ranap.png`}
         alt={`Pelayanan Rawat Inap`}
         label={`Pelayanan Rawat Inap`}
         url={url?.ranap}

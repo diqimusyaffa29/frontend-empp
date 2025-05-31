@@ -14,7 +14,7 @@ const LainnyaPage = () => {
       <IconButtonLink
         marginTop={20}
         marginBottom={0}
-        imgSrc="/assets/catatn.jpg"
+        imgSrc="/assets/icon/catatan.png"
         alt={`Catatan`}
         label={`Catatan`}
         url={url?.catatan}

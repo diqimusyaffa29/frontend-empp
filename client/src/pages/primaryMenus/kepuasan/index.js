@@ -11,7 +11,7 @@ const KepuasanPage = () => {
   return (
     <div className="container" style={{ marginTop: 100 }}>
       <IconButtonLink
-        imgSrc="/assets/keluhan.webp"
+        imgSrc="/assets/icon/komplain.png"
         alt={`Catatan Komplain Pasien`}
         label={`Catatan Komplain Pasien`}
         url={url?.kepuasan}

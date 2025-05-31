@@ -21,8 +21,8 @@ const IrjPage = () => {
         colAlt2={`Pasien ODC`}
         labelCol1={`Pelayanan Rawat Jalan`}
         labelCol2={`Pasien ODC`}
-        imgCol1={`${prefix}/assets/irj.png`}
-        imgCol2={`${prefix}/assets/oneday.jpg`}
+        imgCol1={`${prefix}/assets/icon/rajal.png`}
+        imgCol2={`${prefix}/assets/icon/pasienOdc.png`}
         urlCol1={url?.rajalA}
         urlCol2={url?.rajalB}
       />
