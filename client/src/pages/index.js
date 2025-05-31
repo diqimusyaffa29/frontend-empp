@@ -34,7 +34,7 @@ export default function Home() {
           <div className="row">
             <div className="col">
               <IconButtonLink
-                imgSrc={`${prefix}/assets/laporanmod.png`}
+                imgSrc={`${prefix}/assets/icon/hasilSupervisi.png`}
                 alt={`Hasil Supervise`}
                 label={`Hasil Supervisi`}
                 url={url?.hasilSupervisi}
@@ -45,9 +45,9 @@ export default function Home() {
             </div>
             <div className="col">
               <IconButtonLink
-                imgSrc={`${prefix}/assets/laporanmod.png`}
+                imgSrc={`${prefix}/assets/icon/belumSelesai.png`}
                 alt={`Temuan Hasil`}
-                label={`Temuan yang belum Selesai`}
+                label={`Belum Selesai`}
                 url={url?.responCatatan}
                 imgHeight={100}
                 imgWidth={100}
@@ -70,7 +70,7 @@ export default function Home() {
                   url={url?.jadwalUnit}
                   alt={`Jadwal Unit`}
                   label={`Jadwal Unit`}
-                  imgSrc={`${prefix}/assets/unit.jpg`}
+                  imgSrc={`${prefix}/assets/icon/jadwalUnit.png`}
                   imgHeight={100}
                   imgWidth={100}
                 />
@@ -151,8 +151,8 @@ export default function Home() {
                 <RowColumnLink
                   label1={`Form A`}
                   label2={`Form B`}
-                  imgSrc1={`/assets/casemanager.png`}
-                  imgSrc2={`/assets/casemanager.png`}
+                  imgSrc1={`/assets/icon/formA.png`}
+                  imgSrc2={`/assets/icon/formB.png`}
                   isBorder1={`border`}
                   isBorder2={`border`}
                   witchLink1={`/primaryMenus/forma`}
@@ -161,8 +161,8 @@ export default function Home() {
                 <RowColumnLink
                   label1={`Form P3`}
                   label2={`Form Checklist P3`}
-                  imgSrc1={`/assets/casemanager.png`}
-                  imgSrc2={`/assets/casemanager.png`}
+                  imgSrc1={`/assets/icon/p3.png`}
+                  imgSrc2={`/assets/icon/checklist.png`}
                   isBorder1={`border`}
                   isBorder2={`border`}
                   witchLink1={`/primaryMenus/p3`}

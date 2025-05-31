@@ -27,7 +27,7 @@ export default function PedomanPage() {
           label={`Materi Pelatihan`}
           fontWeight={`fs-2`}
           alt={`Materi Pelatihan Google Drive`}
-          imgSrc={`${prefix}/assets/gdrive.png`}
+          imgSrc={`${prefix}/assets/icon/pelatihan.png`}
           imgHeight={130}
           imgWidth={200}
         />
@@ -41,8 +41,8 @@ export default function PedomanPage() {
           labelCol2={`Pedoman IRJ`}
           colAlt1={`Pedoman IGD`}
           colAlt2={`Pedoman IRJ`}
-          imgCol1={`${prefix}/assets/gdocs.png`}
-          imgCol2={`${prefix}/assets/gdocs.png`}
+          imgCol1={`${prefix}/assets/icon/igd.png`}
+          imgCol2={`${prefix}/assets/icon/rajal.png`}
           urlCol1={url?.pedomanIgd}
           urlCol2={url?.pedomanIrj}
         />
@@ -55,8 +55,8 @@ export default function PedomanPage() {
           labelCol2={`Pedoman ICU`}
           colAlt1={`Pedoman IBS`}
           colAlt2={`Pedoman ICU`}
-          imgCol1={`${prefix}/assets/gdocs.png`}
-          imgCol2={`${prefix}/assets/gdocs.png`}
+          imgCol1={`${prefix}/assets/icon/ibs.png`}
+          imgCol2={`${prefix}/assets/icon/icu.png`}
           urlCol1={url?.pedomanIbs}
           urlCol2={url?.pedomanIcu}
         />
@@ -69,12 +69,12 @@ export default function PedomanPage() {
           labelCol2={`Pedoman RWI`}
           colAlt1={`Pedoman Hemodialisa`}
           colAlt2={`Pedoman RWI`}
-          imgCol1={`${prefix}/assets/gdocs.png`}
-          imgCol2={`${prefix}/assets/gdocs.png`}
+          imgCol1={`${prefix}/assets/icon/hemo.png`}
+          imgCol2={`${prefix}/assets/icon/ranap.png`}
           urlCol1={url?.pedomanHd}
           urlCol2={url?.pedomanRwi}
         />
-        <RowColumn imgH1={200} imgW1={300} imgCol1={`${prefix}/assets/gdocs.png`} labelCol1={`SOP`} colAlt1={`SOP`} urlCol1={url?.pedomanSop}/>
+        <RowColumn imgH1={200} imgW1={300} imgCol1={`${prefix}/assets/icon/sop.png`} labelCol1={`SOP`} colAlt1={`SOP`} urlCol1={url?.pedomanSop}/>
       </div>
     </div>
   );

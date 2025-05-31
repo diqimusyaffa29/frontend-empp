@@ -20,8 +20,8 @@ const formaPage = () => {
                 colAlt2={`Hasil Form A`}
                 labelCol1={`Input Form A`}
                 labelCol2={`Hasil Form A`}
-                imgCol1={`${prefix}/assets/casemanager.png`}
-                imgCol2={`${prefix}/assets/casemanager.png`}
+                imgCol1={`${prefix}/assets/icon/formA.png`}
+                imgCol2={`${prefix}/assets/icon/hasilForm.png`}
                 // urlCol1={url?.rajalA} waiting for url in kode.php
                 // urlCol2={url?.rajalB} waiting for url in kode.php
             />

@@ -20,8 +20,8 @@ const formbPage = () => {
                 colAlt2={`Hasil Form B`}
                 labelCol1={`Input Form B`}
                 labelCol2={`Hasil Form B`}
-                imgCol1={`${prefix}/assets/casemanager.png`}
-                imgCol2={`${prefix}/assets/casemanager.png`}
+                imgCol1={`${prefix}/assets/icon/formB.png`}
+                imgCol2={`${prefix}/assets/icon/hasilForm.png`}
                 // urlCol1={url?.rajalA} waiting for url in kode.php
                 // urlCol2={url?.rajalB} waiting for url in kode.php
             />

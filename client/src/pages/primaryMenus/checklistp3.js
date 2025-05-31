@@ -20,8 +20,8 @@ const checklistP3Page = () => {
                 colAlt2={`Hasil Checklist Form P3`}
                 labelCol1={`Input Checklist Form P3`}
                 labelCol2={`Hasil Checklist Form P3`}
-                imgCol1={`${prefix}/assets/casemanager.png`}
-                imgCol2={`${prefix}/assets/casemanager.png`}
+                imgCol1={`${prefix}/assets/icon/checklist.png`}
+                imgCol2={`${prefix}/assets/icon/hasilForm.png`}
                 // urlCol1={url?.rajalA} waiting for url in kode.php
                 // urlCol2={url?.rajalB} waiting for url in kode.php
             />
