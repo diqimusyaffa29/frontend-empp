@@ -48,6 +48,17 @@ export default function Home() {
             </div>
             <div className="col">
               <IconButtonLink
+                imgSrc={`${prefix}/assets/icon/caseManager.png`}
+                alt={`Case Manager`}
+                label={`Case Manager`}
+                url={url?.caseManager}
+                imgHeight={100}
+                imgWidth={100}
+                fontWeight={`fs-2`}
+              />
+            </div>
+            <div className="col">
+              <IconButtonLink
                 imgSrc={`${prefix}/assets/icon/belumSelesai.png`}
                 alt={`Temuan Hasil`}
                 label={`Belum Selesai`}
@@ -155,7 +166,7 @@ export default function Home() {
                   isBorder1={`border`}
                   isBorder2={`border`}
                   imgSrc1={`${prefix}/assets/icon/kepuasanPelanggan.png`}
-                  imgSrc2={`${prefix}/assets/icon/caseManager.png`}
+                  imgSrc2={`${prefix}/assets/icon/hasilCaseManager.png`}
                   label1={`Kepuasaan Pelanggan`}
                   label2={`Case Manager`}
                   witchLink1={`/primaryMenus/kepuasan`}
