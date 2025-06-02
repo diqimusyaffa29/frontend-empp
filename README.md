@@ -35,7 +35,7 @@ Prasyarat
 1. Clone repositori:
     ```
     bash
-    git clone https://github.com/nama-user/e-mpp-supervision.git
+    git clone https://github.com/diqimusyaffa29/project-empp.git
     ```
 
 2. Frontend (Next.js):
