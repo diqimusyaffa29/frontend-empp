@@ -20,7 +20,7 @@ const FooterComponent = () => {
 
 
                 <div className="text-center p-2 bg-secondary">
-                    © 2025 IT DEPT RSI Sultan Agung Banjarbaru
+                    ©2025 IT DEPT
                 </div>
             </footer>
         </>

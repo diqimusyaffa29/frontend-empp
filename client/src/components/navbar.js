@@ -1,11 +1,26 @@
 "use client";
-import axios from "axios";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+import TimeComponent from "./time";
 
 export default function Navbar() {
+  const router = useRouter();
   const [user, setUser] = useState(null);
+  const [url, setUrl] = useState(null);
+  const [roles, setRoles] = useState(null);
+
+  // GET USER INFORMATION
+  useEffect(() => {
+    const token = localStorage.getItem("auth_token");
+    setUrl(JSON.parse(localStorage.getItem("rs") || "null"));
+    setRoles(localStorage.getItem("roles") || "null");
+    console.log(`pengecekan dilakukan`);
+    if (!token) {
+      router.push("/login/");
+    }
+  }, [router]);
 
   useEffect(() => {
     const userStr = localStorage.getItem("user");
@@ -57,13 +72,23 @@ export default function Navbar() {
           </button>
           <div className="collapse navbar-collapse " id="navbarNavAltMarkup">
             <div className="navbar-nav ms-auto ps-2 pe-xl-4 gap-2">
+              
+              <Link
+                href={`${url?.profilrs}`}
+                // nanti dibuat dinamis
+                className={`nav-link rounded ps-2`}
+                aria-current="page"
+                onClick={handleNavLinkClick}
+                target="__blank"
+              >
+                Profil Rumah Sakit
+              </Link>
               <Link
                 href="/"
-                className={`nav-link rounded ps-2 ${
-                  pathName === "/"
-                    ? "active bg-success bg-gradient text-white"
-                    : ""
-                }`}
+                className={`nav-link rounded ps-2 ${pathName === "/"
+                  ? "active bg-success bg-gradient text-white"
+                  : ""
+                  }`}
                 aria-current="page"
                 onClick={handleNavLinkClick}
               >
@@ -71,11 +96,10 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/pedoman"
-                className={`nav-link rounded ps-2 ${
-                  pathName === "/pedoman/"
-                    ? "active bg-success bg-gradient text-white"
-                    : ""
-                }`}
+                className={`nav-link rounded ps-2 ${pathName === "/pedoman/"
+                  ? "active bg-success bg-gradient text-white"
+                  : ""
+                  }`}
                 aria-current="page"
                 onClick={handleNavLinkClick}
               >
@@ -83,11 +107,10 @@ export default function Navbar() {
               </Link>
               <Link
                 href="/tutorial"
-                className={`nav-link rounded ps-2 ${
-                  pathName === "/tutorial/"
-                    ? "active bg-success bg-gradient text-white"
-                    : ""
-                }`}
+                className={`nav-link rounded ps-2 ${pathName === "/tutorial/"
+                  ? "active bg-success bg-gradient text-white"
+                  : ""
+                  }`}
                 aria-current="page"
                 onClick={handleNavLinkClick}
               >

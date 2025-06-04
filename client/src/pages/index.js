@@ -4,8 +4,8 @@ import IconButtonLink from "@/components/iconButton";
 import RowColumnLink from "@/components/rowLink";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import RowColumn from "@/components/row";
 import Link from "next/link";
+import TimeComponent from "@/components/time";
 
 export default function Home() {
   const router = useRouter();
