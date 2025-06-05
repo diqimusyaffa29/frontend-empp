@@ -56,7 +56,7 @@ export default function Navbar() {
     <div className="">
       <nav className="navbar navbar-expand-lg bg-light fixed-top">
         <div className="container-fluid">
-          <Link href={`/`} className="navbar-brand ps-2 ps-xl-3 fs-4">
+          <Link href={`/`} className="navbar-brand ps-2 ps-xl-5 fs-1 fw-semibold">
             E-MPP
           </Link>
           <button
@@ -92,7 +92,7 @@ export default function Navbar() {
                 aria-current="page"
                 onClick={handleNavLinkClick}
               >
-                Manajer On Duty
+                Manajer Pelayan Pasien
               </Link>
               <Link
                 href="/pedoman"

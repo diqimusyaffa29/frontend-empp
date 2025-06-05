@@ -29,9 +29,10 @@ export default function Home() {
   return (
     <div>
       <HeroSection
-        title={`MPP Supervision Website`}
-        description={`Website for MPP to Supervise`}
+        title="Website Supervisi MPP"
+        description="Platform digital untuk mendukung proses supervisi Manajemen Pelaksanaan Pasien (MPP) secara efisien dan terstruktur."
       />
+
       <div className="container pb-5" style={{ marginTop: 90 }}>
         {(roles === "mpp" || isLimitedRole) && (
           <div className="row">
