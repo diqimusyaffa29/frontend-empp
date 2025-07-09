@@ -5,7 +5,6 @@ import RowColumnLink from "@/components/rowLink";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
-import TimeComponent from "@/components/time";
 
 export default function Home() {
   const router = useRouter();
@@ -17,9 +16,10 @@ export default function Home() {
     setUrl(JSON.parse(localStorage.getItem("rs") || "null"));
     setRoles(localStorage.getItem("roles") || "null");
     console.log(`pengecekan dilakukan`);
+    
     if (!token) {
-      router.push("/login/");
-    }
+    router.push("/login/");
+  }
   }, [router]);
 
   const prefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || "";
@@ -29,8 +29,8 @@ export default function Home() {
   return (
     <div>
       <HeroSection
-        title="Website Supervisi MPP"
-        description="Platform digital untuk mendukung proses supervisi Manajemen Pelaksanaan Pasien (MPP) secara efisien dan terstruktur."
+        title="E-Supervisi "
+        description="Platform digital untuk mendukung proses Supervisi pelayanan Rumah Sakit  secara efisien dan terstruktur"
       />
 
       <div className="container pb-5" style={{ marginTop: 90 }}>

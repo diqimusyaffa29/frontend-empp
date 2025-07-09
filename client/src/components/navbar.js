@@ -57,7 +57,7 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg bg-light fixed-top">
         <div className="container-fluid">
           <Link href={`/`} className="navbar-brand ps-2 ps-xl-5 fs-1 fw-semibold">
-            E-MPP
+            E-SUPERVISI
           </Link>
           <button
             className="navbar-toggler"
@@ -92,7 +92,7 @@ export default function Navbar() {
                 aria-current="page"
                 onClick={handleNavLinkClick}
               >
-                Manajer Pelayan Pasien
+                Instrumen Supervisi
               </Link>
               <Link
                 href="/pedoman"
