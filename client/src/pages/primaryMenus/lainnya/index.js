@@ -15,8 +15,8 @@ const LainnyaPage = () => {
         marginTop={20}
         marginBottom={0}
         imgSrc="/assets/icon/catatan.png"
-        alt={`Catatan`}
-        label={`Catatan`}
+        alt={`Analisis`}
+        label={`Analisis`}
         url={url?.catatan}
         imgHeight={100}
         imgWidth={100}

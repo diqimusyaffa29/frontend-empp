@@ -20,17 +20,17 @@ export default function PedomanPage() {
 
   return (
     <div>
-      <HeroSection title={`Pedoman MPP`} />
+      <HeroSection title={`Pedoman Supervisi`} />
       <div className="container pb-5" style={{ marginTop: 90 }}>
-        <IconButtonLink
-          url={url?.materiPelatihan}
-          label={`Materi Pelatihan`}
-          fontWeight={`fs-2`}
-          alt={`Materi Pelatihan Google Drive`}
-          imgSrc={`${prefix}/assets/icon/pelatihan.png`}
-          imgHeight={130}
-          imgWidth={200}
-        />
+          <IconButtonLink
+            url={url?.materiPelatihan}
+            label={`Materi Pelatihan`}
+            fontWeight={`fs-2`}
+            alt={`Materi Pelatihan Google Drive`}
+            imgSrc={`${prefix}/assets/icon/pelatihan.png`}
+            imgHeight={130}
+            imgWidth={200}
+          />
         <hr style={{ borderTop: "3px solid #000" }} className="mb-5" />
         <RowColumn
           imgH1={200}
@@ -74,7 +74,7 @@ export default function PedomanPage() {
           urlCol1={url?.pedomanHd}
           urlCol2={url?.pedomanRwi}
         />
-        <RowColumn imgH1={200} imgW1={300} imgCol1={`${prefix}/assets/icon/sop.png`} labelCol1={`SOP`} colAlt1={`SOP`} urlCol1={url?.pedomanSop}/>
+        <RowColumn imgH1={200} imgW1={300} imgCol1={`${prefix}/assets/icon/sop.png`} labelCol1={`SOP`} colAlt1={`SOP`} urlCol1={url?.spo} />
       </div>
     </div>
   );

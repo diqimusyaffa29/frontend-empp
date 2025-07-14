@@ -61,12 +61,12 @@ export default function Home() {
             <div className="col">
               <IconButtonLink
                 imgSrc={`${prefix}/assets/icon/belumSelesai.png`}
-                alt={`Temuan Hasil`}
-                label={`Belum Selesai`}
+                alt={`Temuan Masalah dan RTL`}
+                label={`Temuan Masalah dan RTL`}
                 url={url?.responCatatan}
                 imgHeight={100}
                 imgWidth={100}
-                fontWeight={`fs-2`}
+                fontWeight={`fs-3`}
               />
             </div>
           </div>
@@ -116,8 +116,8 @@ export default function Home() {
                 <div className="col">
                   <IconButtonLink
                     url={url?.jadwalMpp}
-                    alt={`Jadwal MPP`}
-                    label={`Jadwal MPP`}
+                    alt={`Jadwal Supervisor`}
+                    label={`Jadwal Supervisor`}
                     imgSrc={`${prefix}/assets/icon/mpp.png`}
                     imgHeight={100}
                     imgWidth={100}
