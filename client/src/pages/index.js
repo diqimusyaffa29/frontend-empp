@@ -187,7 +187,7 @@ export default function Home() {
                           width={100}
                           height={100}
                         />
-                        <p className={"fontWeight"}>Lainnya</p>
+                        <p className={"fontWeight"}>Analisis</p>
                       </div>
                     </Link>
                   </div>
